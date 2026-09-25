@@ -1427,3 +1427,31 @@ export type {
   SubmitTransactionOptions,
   SubmitServer,
 } from "./transaction/submit.js";
+
+// ---------------------------------------------------------------------------
+// #840 — XBullAdapter listener-leak fix
+// ---------------------------------------------------------------------------
+
+export { XBullAdapter } from "./wallets/adapters/XBullAdapter.js";
+
+// ---------------------------------------------------------------------------
+// #781 — Moving average for fee trend analysis
+// ---------------------------------------------------------------------------
+
+export { computeMovingAverage } from "./fees/trend.js";
+
+// ---------------------------------------------------------------------------
+// #780 — Certificate pinning for anchor HTTPS endpoints
+// ---------------------------------------------------------------------------
+
+export { AnchorVerifier } from "./anchors/AnchorVerifier.js";
+export type { AnchorVerifierOptions, VerificationResult } from "./anchors/AnchorVerifier.js";
+export { CertificatePinningError } from "./errors.js";
+
+// ---------------------------------------------------------------------------
+// #779 — TOML schema version validation
+// ---------------------------------------------------------------------------
+
+export { StellarTomlParser, SUPPORTED_TOML_VERSIONS } from "./anchors/StellarTomlParser.js";
+export type { StellarTomlParserOptions, TomlMetadata, TomlCurrency } from "./anchors/StellarTomlParser.js";
+export { UnsupportedTomlVersionError } from "./errors.js";
